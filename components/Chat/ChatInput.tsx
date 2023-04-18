@@ -1,32 +1,19 @@
+import { useTranslation } from 'next-i18next'
 import {
-  IconArrowDown,
-  IconBolt,
-  IconBrandGoogle,
-  IconPlayerStop,
-  IconRepeat,
-  IconSend,
-} from '@tabler/icons-react';
+    KeyboardEvent, MutableRefObject, useCallback, useContext, useEffect, useRef,
+    useState
+} from 'react'
+import HomeContext from '@/pages/api/home/home.context'
+import { Message } from '@/types/chat'
+import { Plugin } from '@/types/plugin'
+import { Prompt } from '@/types/prompt'
 import {
-  KeyboardEvent,
-  MutableRefObject,
-  useCallback,
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-
-import { useTranslation } from 'next-i18next';
-
-import { Message } from '@/types/chat';
-import { Plugin } from '@/types/plugin';
-import { Prompt } from '@/types/prompt';
-
-import HomeContext from '@/pages/api/home/home.context';
-
-import { PluginSelect } from './PluginSelect';
-import { PromptList } from './PromptList';
-import { VariableModal } from './VariableModal';
+    IconArrowDown, IconBolt, IconBrandGoogle, IconPlayerStop, IconRepeat,
+    IconSend
+} from '@tabler/icons-react'
+import { PluginSelect } from './PluginSelect'
+import { PromptList } from './PromptList'
+import { VariableModal } from './VariableModal'
 
 interface Props {
   onSend: (message: Message, plugin: Plugin | null) => void;
@@ -43,7 +30,7 @@ export const ChatInput = ({
   onScrollDownClick,
   stopConversationRef,
   textareaRef,
-  showScrollDownButton
+  showScrollDownButton,
 }: Props) => {
   const { t } = useTranslation('chat');
 
@@ -381,17 +368,23 @@ export const ChatInput = ({
       </div>
       <div className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
+          href="https://github.com/ArcadeLabsInc/arcade-gpt"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >
+          ArcadeGPT
+        </a>{' '}
+        is a fork of{' '}
+        <a
           href="https://github.com/mckaywrigley/chatbot-ui"
           target="_blank"
           rel="noreferrer"
           className="underline"
         >
-          ChatBot UI
+          chatbot-ui
         </a>
-        .{' '}
-        {t(
-          "ArcadeGPT is an advanced chatbot kit for OpenAI's chat models aiming to mimic ChatGPT's interface and functionality.",
-        )}
+        . Conversations are only stored locally, but do not assume privacy.
       </div>
     </div>
   );
