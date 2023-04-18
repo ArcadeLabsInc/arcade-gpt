@@ -1,14 +1,14 @@
-# Chatbot UI
+# ArcadeGPT
 
-Chatbot UI is an advanced chatbot kit for OpenAI's chat models built on top of [Chatbot UI Lite](https://github.com/mckaywrigley/chatbot-ui-lite) using Next.js, TypeScript, and Tailwind CSS.
+ArcadeGPT is an advanced chatbot kit for OpenAI's chat models built on top of [ArcadeGPT Lite](https://github.com/mckaywrigley/chatbot-ui-lite) using Next.js, TypeScript, and Tailwind CSS.
 
 See a [demo](https://twitter.com/mckaywrigley/status/1640380021423603713?s=46&t=AowqkodyK6B4JccSOxSPew).
 
-![Chatbot UI](./public/screenshots/screenshot-0402023.jpg)
+![ArcadeGPT](./public/screenshots/screenshot-0402023.jpg)
 
 ## Updates
 
-Chatbot UI will be updated over time.
+ArcadeGPT will be updated over time.
 
 Expect frequent improvements.
 
@@ -30,13 +30,13 @@ Modify the system prompt in `utils/server/index.ts`.
 
 **Vercel**
 
-Host your own live version of Chatbot UI with Vercel.
+Host your own live version of ArcadeGPT with Vercel.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmckaywrigley%2Fchatbot-ui)
 
 **Replit**
 
-Fork Chatbot UI on Replit [here](https://replit.com/@MckayWrigley/chatbot-ui-pro?v=1).
+Fork ArcadeGPT on Replit [here](https://replit.com/@MckayWrigley/chatbot-ui-pro?v=1).
 
 **Docker**
 
