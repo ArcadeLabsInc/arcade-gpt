@@ -1,11 +1,8 @@
-import { IconExternalLink } from '@tabler/icons-react';
-import { useContext } from 'react';
-
-import { useTranslation } from 'next-i18next';
-
-import { OpenAIModel } from '@/types/openai';
-
-import HomeContext from '@/pages/api/home/home.context';
+import { useTranslation } from 'next-i18next'
+import { useContext } from 'react'
+import HomeContext from '@/pages/api/home/home.context'
+import { OpenAIModel } from '@/types/openai'
+import { IconExternalLink } from '@tabler/icons-react'
 
 export const ModelSelect = () => {
   const { t } = useTranslation('chat');
@@ -51,7 +48,7 @@ export const ModelSelect = () => {
           ))}
         </select>
       </div>
-      <div className="w-full mt-3 text-left text-neutral-700 dark:text-neutral-400 flex items-center">
+      {/* <div className="w-full mt-3 text-left text-neutral-700 dark:text-neutral-400 flex items-center">
         <a
           href="https://platform.openai.com/account/usage"
           target="_blank"
@@ -60,7 +57,7 @@ export const ModelSelect = () => {
           <IconExternalLink size={18} className={'inline mr-1'} />
           {t('View Account Usage')}
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
